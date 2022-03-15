@@ -19,7 +19,9 @@ class FlexNGateApplicantsServiceProvider extends PackageServiceProvider
             ->name('flex-n-gate-applicants')
             ->hasConfigFile()
             ->hasViews()
+            ->hasMigration('create_flex-n-gate-applicants_skills_table')
             ->hasMigration('create_flex-n-gate-applicants_table')
+            ->hasMigration('create_flex-n-gate-skills_table')
             ->hasCommand(FlexNGateApplicantsCommand::class);
     }
 }
